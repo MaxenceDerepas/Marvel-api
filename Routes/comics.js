@@ -34,7 +34,7 @@ router.get("/user/comics", async (req, res) => {
         res.status(200).json(user.favoriteComics);
     } catch (error) {
         console.log(error.message);
-        res.status(400).json({ message: "" });
+        res.status(400).json({ message: error.message });
     }
 });
 
